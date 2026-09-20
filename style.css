@@ -1,0 +1,1254 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fce4ec;
+    color: #5a3d46;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================================
+   PANTALLAS
+   ========================================= */
+
+section {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   LOGIN
+   ========================================= */
+
+#login-screen {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+/* =========================================
+   TARJETA DEL LOGIN
+   ========================================= */
+
+.login-card {
+    width: min(90%, 480px);
+
+    padding: 45px 40px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 3px solid #f3a6bd;
+
+    border-radius: 30px;
+
+    box-shadow: 0 15px 35px rgba(150, 70, 100, 0.15);
+
+    text-align: center;
+}
+.login-gatito {
+    font-size: 5rem;
+
+    margin-bottom: 10px;
+
+    animation: gatitoFlota 2.5s ease-in-out infinite;
+}
+
+@keyframes gatitoFlota {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Tarjeta principal */
+
+#login-screen > * {
+    text-align: center;
+}
+
+
+/* =========================================
+   TEXTO DEL LOGIN
+   ========================================= */
+
+#login-screen h1 {
+    font-size: 2.5rem;
+
+    margin: 10px 0 15px;
+
+    color: #b84c6f;
+}
+
+#login-screen p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   CONTRASEÑA
+   ========================================= */
+
+#password {
+    display: block;
+
+    width: 280px;
+    padding: 13px;
+
+    margin: 25px auto 15px;
+
+    border: 2px solid #e8a5b8;
+    border-radius: 15px;
+
+    font-size: 1rem;
+
+    outline: none;
+}
+
+#password:focus {
+    border-color: #c95c7d;
+}
+
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+button {
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #f3a6bd;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #d96b8d;
+}
+
+/* =========================================
+   OPCION DE "OCULTO"
+   ========================================= */
+
+.oculto {
+    display: none;
+}
+
+
+/* =========================================
+   MENSAJE DE ERROR
+   ========================================= */
+
+#login-message {
+    min-height: 25px;
+    margin-top: 15px;
+}
+
+/* =========================================
+   PANTALLA 1 - ¿QUIERES TU REGALO?
+   ========================================= */
+
+#inicio-screen {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+/* =========================================
+   TARJETA DE LA PANTALLA 1
+   ========================================= */
+
+.regalo-card {
+    width: min(90%, 550px);
+
+    padding: 45px 40px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 3px solid #f3a6bd;
+
+    border-radius: 30px;
+
+    box-shadow: 0 15px 35px rgba(150, 70, 100, 0.15);
+
+    text-align: center;
+}
+
+
+/* Gatito */
+
+#gatito-inicio {
+    font-size: 5rem;
+
+    margin-bottom: 15px;
+}
+
+
+/* Título */
+
+#inicio-screen h1 {
+    color: #b84c6f;
+
+    font-size: 2.5rem;
+
+    margin: 10px 0 20px;
+}
+
+
+/* Mensaje */
+
+#mensaje-inicio {
+    font-size: 1.15rem;
+
+    min-height: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Botones */
+
+.botones-inicio {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+/* =========================================
+   PANTALLA 2 - RECUERDOS
+   ========================================= */
+
+#recuerdos-screen {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background: #fce4ec;
+}
+
+
+.recuerdos-container {
+    width: 100%;
+    max-width: 1100px;
+
+    text-align: center;
+}
+
+
+.recuerdos-container h1 {
+    color: #b84c6f;
+
+    font-size: 2.8rem;
+
+    margin-bottom: 10px;
+}
+
+
+.recuerdos-intro {
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    font-size: 1.1rem;
+
+    line-height: 1.6;
+}
+
+/* =========================================
+   LÍNEA DE TIEMPO
+   ========================================= */
+
+.timeline {
+    display: flex;
+
+    gap: 25px;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 20px 15px 30px;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: thin;
+}
+
+
+.recuerdo-card {
+    flex: 0 0 280px;
+
+    background: white;
+
+    border: 3px solid #f3a6bd;
+
+    border-radius: 20px;
+
+    padding: 15px;
+
+    box-shadow: 0 10px 25px rgba(150, 70, 100, 0.12);
+
+    transition: transform 0.25s;
+}
+
+
+.recuerdo-card:hover {
+    transform: translateY(-6px) rotate(-1deg);
+}
+
+
+.foto-placeholder {
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #f8d5e0;
+
+    border-radius: 15px;
+}
+
+.foto-placeholder img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.recuerdo-card p {
+    font-size: 1rem;
+
+    line-height: 1.5;
+
+    margin: 15px 5px 5px;
+}
+
+/* =========================================
+   BOTONES DE RECUERDOS
+   ========================================= */
+
+.recuerdos-botones {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+/* =========================================
+   PANTALLA 3 - GEARS OF WAR
+   ========================================= */
+
+#gears-screen {
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #182331 0%,
+            #0b0f14 55%,
+            #050608 100%
+        );
+
+    color: #e7e9ec;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
+}
+
+
+/* CONTENEDOR */
+
+.gears-container {
+
+    width: min(92%, 900px);
+
+    padding: 40px;
+
+    border: 1px solid #59616b;
+
+    background: rgba(8, 11, 15, 0.92);
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.8),
+        inset 0 0 40px rgba(120, 0, 20, 0.08);
+
+}
+
+
+/* ENCABEZADO */
+
+.gears-label {
+
+    display: block;
+
+    color: #9ba4ae;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.gears-header h1 {
+
+    margin: 0;
+
+    color: #d7d9dc;
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    letter-spacing: 4px;
+
+    font-weight: 900;
+
+}
+
+
+.gears-header h2 {
+
+    margin: 12px 0 0;
+
+    color: #b32b3d;
+
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+
+    letter-spacing: 2px;
+
+}
+
+
+/* DIVISOR */
+
+.gears-divider {
+
+    height: 2px;
+
+    width: 100%;
+
+    margin: 30px 0;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #8f1d2c,
+            transparent
+        );
+}
+
+
+/* OBJETIVOS */
+
+.gears-objectives {
+
+    margin-bottom: 30px;
+}
+
+
+.gears-objectives p {
+
+    margin-bottom: 15px;
+
+    color: #aeb5bd;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 3px;
+}
+
+
+#objetivos-completados {
+
+    color: #d33a4f;
+
+    font-weight: bold;
+}
+
+
+.objective-indicators {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+}
+
+
+.objective-indicator {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 1px solid #59616b;
+
+    color: #59616b;
+
+    font-size: 1.5rem;
+
+}
+
+
+.objective-indicator.completado {
+
+    color: #d33a4f;
+
+    border-color: #d33a4f;
+
+    background: rgba(140, 20, 35, 0.15);
+}
+
+
+/* TARJETA DE PREGUNTA */
+
+.gears-question-card {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    border: 1px solid #414a54;
+
+    background: #11171e;
+
+    text-align: left;
+}
+
+
+.question-number {
+
+    color: #8e98a3;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+}
+
+
+.gears-question-card h3 {
+
+    margin: 20px 0 25px;
+
+    color: #f0f1f2;
+
+    font-size: 1.4rem;
+
+    line-height: 1.5;
+}
+
+
+/* RESPUESTAS */
+
+.respuestas-gears {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.respuesta-gears {
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: 1px solid #59616b;
+
+    background: #171e26;
+
+    color: #d8dce0;
+
+    text-align: left;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.respuesta-gears:hover {
+
+    border-color: #b32b3d;
+
+    background: #24151a;
+
+    transform: translateX(4px);
+}
+
+
+/* MENSAJE */
+
+#mensaje-gears {
+
+    min-height: 25px;
+
+    margin-top: 18px;
+
+    color: #d33a4f;
+
+    font-weight: bold;
+}
+
+
+/* RECOMPENSA */
+
+#recompensa-gears {
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    border: 1px solid #8f1d2c;
+
+    background: rgba(100, 10, 25, 0.12);
+}
+
+
+#recompensa-gears h2 {
+
+    color: #d33a4f;
+
+    letter-spacing: 3px;
+}
+
+
+#recompensa-gears p {
+
+    color: #aeb5bd;
+
+    letter-spacing: 2px;
+}
+
+
+#btnReclamarRegalo {
+
+    padding: 14px 30px;
+
+    border: 1px solid #d33a4f;
+
+    background: #8f1d2c;
+
+    color: white;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+
+#btnReclamarRegalo:hover {
+
+    background: #b32b3d;
+}
+
+/* =========================================
+   TRANSICIÓN HACIA GEARS
+   ========================================= */
+
+.gears-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background: linear-gradient(
+        135deg,
+        #fce4ec,
+        #f4a6bd,
+        #9c3048,
+        #273746,
+        #050608
+    );
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity 1s ease;
+}
+
+
+.gears-transition.active {
+    opacity: 1;
+}
+
+/* =========================================
+   VENTANA DEL REGALO
+   ========================================= */
+
+.modal-regalo {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.82);
+
+    padding: 20px;
+}
+
+
+.regalo-contenido {
+
+    width: min(90%, 550px);
+
+    padding: 45px 35px;
+
+    background: #0d1218;
+
+    border: 1px solid #b32b3d;
+
+    box-shadow:
+        0 0 40px rgba(150, 20, 40, 0.35);
+
+    text-align: center;
+
+    color: #e7e9ec;
+}
+
+
+.regalo-icono {
+
+    font-size: 4rem;
+
+    margin-bottom: 15px;
+}
+
+
+.regalo-label {
+
+    color: #8e98a3;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+}
+
+
+.regalo-contenido h2 {
+
+    margin: 15px 0;
+
+    color: #d33a4f;
+
+    letter-spacing: 3px;
+}
+
+
+.regalo-contenido p {
+
+    color: #b8bec5;
+
+    line-height: 1.6;
+}
+
+
+.codigo-regalo {
+
+    margin: 25px auto;
+
+    padding: 18px;
+
+    background: #171e26;
+
+    border: 1px dashed #d33a4f;
+
+    color: #f0f1f2;
+
+    font-family: monospace;
+
+    font-size: 1.25rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+#btnContinuarRegalo {
+
+    padding: 13px 30px;
+
+    border: 1px solid #d33a4f;
+
+    background: #8f1d2c;
+
+    color: white;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+#btnContinuarRegalo:hover {
+
+    background: #b32b3d;
+
+    transform: translateY(-2px);
+}
+
+/* Ocultar el modal del regalo hasta que sea desbloqueado */
+.modal-regalo.oculto {
+    display: none;
+}
+
+/* =========================================
+   NOTIFICACIÓN DE LA CARTA
+   ========================================= */
+
+#carta-notificacion {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 20000;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    backdrop-filter: blur(4px);
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.notificacion-carta {
+
+    width: min(90%, 550px);
+
+    padding: 50px 35px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 2px solid #f0a0b9;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(180, 70, 110, 0.15);
+
+    animation: aparecerCarta 0.7s ease forwards;
+
+}
+
+
+@keyframes aparecerCarta {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px) scale(0.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+.sobre-icono {
+
+    font-size: 4.5rem;
+
+    margin-bottom: 15px;
+}
+
+
+.notificacion-pequena {
+
+    color: #c05a78;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+}
+
+
+.notificacion-carta h1 {
+
+    color: #b84c6f;
+
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+
+    line-height: 1.3;
+
+    margin: 20px 0 30px;
+}
+
+
+#btnLeerCarta {
+
+    padding: 14px 40px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #e994ae;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+#btnLeerCarta:hover {
+
+    background: #cf6f8d;
+
+    transform: translateY(-2px);
+}
+
+/* ========================================= */
+/* PANTALLA DE LA CARTA */
+/* ========================================= */
+
+.pantalla-carta {
+    position: fixed;
+    inset: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffafd 0%,
+            #fce8f0 45%,
+            #f5cfdd 100%
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 25px;
+
+    z-index: 10000;
+
+    overflow-y: auto;
+
+    animation: entrarPantallaCarta 1.2s ease forwards;
+}
+
+
+/* ========================================= */
+/* HOJA */
+/* ========================================= */
+
+.carta {
+    width: min(650px, 82vw);
+    min-height: 650px;
+
+    background: #fffdfd;
+
+    border: 2px solid #e9a2ba;
+
+    border-radius: 8px;
+
+    padding: 55px 65px;
+
+    box-shadow:
+        0 20px 50px rgba(180, 80, 120, 0.18);
+
+    position: relative;
+
+    animation: aparecerCarta 1.2s ease 0.25s both;
+}
+
+
+/* ========================================= */
+/* DECORACIÓN */
+/* ========================================= */
+
+.carta-decoracion {
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================= */
+/* CONTENIDO */
+/* ========================================= */
+
+.carta-contenido {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: #563b47;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    line-height: 1.9;
+}
+
+#texto-carta {
+    margin-top: 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #6f4055;
+
+    text-align: left;
+
+    white-space: pre-line;
+}
+
+
+/* ========================================= */
+/* SALUDO */
+/* ========================================= */
+
+.carta-saludo {
+    text-align: left;
+
+    font-size: 24px;
+
+    color: #bd5075;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================= */
+/* CURSOR DE ESCRITURA */
+/* ========================================= */
+
+.cursor-carta {
+    display: inline-block;
+
+    width: 2px;
+    height: 24px;
+
+    background: #bd5075;
+
+    animation: parpadearCursor 0.8s infinite;
+}
+
+
+/* ========================================= */
+/* ANIMACIONES */
+/* ========================================= */
+
+@keyframes aparecerCarta {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+@keyframes parpadearCursor {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes entrarPantallaCarta {
+
+    from {
+        opacity: 0;
+        background: #08090c;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+/* ========================================= */
+/* BOTONES FINALES DE LA CARTA */
+/* ========================================= */
+
+.botones-finales-carta {
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+.botones-finales-carta button {
+    width: 260px;
+
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #bd5075;
+    color: white;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.botones-finales-carta button:hover {
+    background: #a94164;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(180, 80, 120, 0.25);
+}

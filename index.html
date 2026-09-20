@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To Kilian, From Me ;p</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA 0: LOGIN -->
+    <section id="login-screen">
+
+        <div class="login-card">
+
+            <div class="login-gatito">
+                🐱
+            </div>
+
+            <h1>To Kilian, From Me ;p</h1>
+
+            <p>Esta página es solamente para ti ❤️</p>
+
+            <input 
+                type="password" 
+                id="password" 
+                placeholder="Escribe la contraseña"
+            >
+
+            <button id="btnEntrar">ENTRAR</button>
+
+            <p id="login-message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PANTALLA 1: ¿QUIERES TU REGALO? -->
+<section id="inicio-screen">
+
+        <div class="regalo-card">
+
+            <div id="gatito-inicio">
+                🐱
+            </div>
+
+            <h1>¿Quieres tu regalo? 🎁</h1>
+
+            <p id="mensaje-inicio">
+                Tengo algo preparado para ti...
+            </p>
+
+            <div class="botones-inicio">
+
+                <button id="btnSi">
+                    SÍ 🎁
+                </button>
+
+                <button id="btnNo">
+                    NO 🐱
+                </button>
+
+                <button id="btnRecoger" class="oculto">
+                    RECOGER 🎁
+                </button>
+
+                <button id="btnContinuar" class="oculto">
+                    CONTINUAR →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PANTALLA 2: RECUERDOS -->
+<section id="recuerdos-screen">
+
+    <div class="recuerdos-container">
+
+        <h1>Algunos recuerdos 🌸</h1>
+
+        <p class="recuerdos-intro">
+            Antes de entregarte tu regalo, quiero enseñarte
+            algunas cosas que he ido guardando de nosotros. No son todas,
+            pero si las que tienen un espacio muy bonito en mi corazón.
+        </p>
+
+
+        <!-- LÍNEA DEL TIEMPO -->
+
+        <div class="timeline" id="timeline">
+
+            <article class="recuerdo-card">
+
+                <div class="foto-placeholder">
+                    <img src="imagenes/image_I.jpeg" alt="1er fotito juntos">
+                </div>
+
+                <p>
+                    Apuesto a que no tienes esta ;p
+                </p>
+
+            </article>
+
+
+            <article class="recuerdo-card">
+
+                <div class="foto-placeholder">
+                    <img src="imagenes/image_II.jpeg" alt="Que lindo haber escuchado tu declaración ese día">
+                </div>
+
+                <p>
+                    30 de Mayo de un 2026
+                </p>
+
+            </article>
+
+
+            <article class="recuerdo-card">
+
+                <div class="foto-placeholder">
+                    <img src="imagenes/image_III.jpeg" alt="Me gusta mucho esta foto">
+                </div>
+
+                <p>
+                    De verdad me gusta mucho esta foto sjskdfndk
+                </p>
+
+            </article>
+
+
+            <article class="recuerdo-card">
+
+                <div class="foto-placeholder">
+                    <img src="imagenes/image_IV.jpeg" alt="Que lindo">
+                </div>
+
+                <p>
+                    No tengo fotos de ti sin gatos, que curioso
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <!-- CONTROLES -->
+
+        <div class="recuerdos-botones">
+
+            <button id="btnSiguienteRecuerdo">
+                SIGUIENTE →
+            </button>
+
+            <button id="btnCompletarRecuerdos">
+                COMPLETADO ✓
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================================
+     PANTALLA 3: GEARS
+     ========================================= -->
+
+    <section id="gears-screen">
+
+        <div class="gears-container">
+
+            <div class="gears-header">
+
+                <span class="gears-label">
+                    COG // BIRTHDAY OPERATION
+                </span>
+
+                <h1>
+                    MISSION: KILIAN
+                </h1>
+
+                <h2>
+                    OBJECTIVE: CLAIM YOUR BIRTHDAY REWARD
+                </h2>
+
+            </div>
+
+
+            <div class="gears-divider"></div>
+
+
+            <div class="gears-objectives">
+
+                <p>
+                    OBJECTIVES:
+                    <span id="objetivos-completados">0</span>
+                    / 3
+                </p>
+
+                <div class="objective-indicators">
+
+                    <span class="objective-indicator" id="objetivo-1">
+                        ◇
+                    </span>
+
+                    <span class="objective-indicator" id="objetivo-2">
+                        ◇
+                    </span>
+
+                    <span class="objective-indicator" id="objetivo-3">
+                        ◇
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREGUNTA -->
+
+            <div class="gears-question-card">
+
+                <span class="question-number">
+                    OBJECTIVE 01
+                </span>
+
+                <h3 id="pregunta-gears">
+                    Pregunta de prueba
+                </h3>
+
+
+                <div class="respuestas-gears">
+
+                    <button class="respuesta-gears" id="respuesta-1">
+                        RESPUESTA A
+                    </button>
+
+                    <button class="respuesta-gears" id="respuesta-2">
+                        RESPUESTA B
+                    </button>
+
+                    <button class="respuesta-gears" id="respuesta-3">
+                        RESPUESTA C
+                    </button>
+
+                </div>
+
+                <p id="mensaje-gears"></p>
+
+            </div>
+
+
+            <!-- RECOMPENSA -->
+
+            <div id="recompensa-gears" class="oculto">
+
+                <h2>
+                    MISSION COMPLETE
+                </h2>
+
+                <p>
+                    BIRTHDAY REWARD UNLOCKED
+                </p>
+
+                <button id="btnReclamarRegalo">
+                    CLAIM REWARD
+                </button>
+
+            </div>
+
+            <!-- VENTANA DEL REGALO -->
+
+            <div id="ventana-regalo" class="modal-regalo oculto">
+
+                <div class="regalo-contenido">
+
+                    <div class="regalo-icono">
+                        🎁
+                    </div>
+
+                    <span class="regalo-label">
+                        COG // REWARD SYSTEM
+                    </span>
+
+                    <h2>
+                        REWARD UNLOCKED
+                    </h2>
+
+                    <p>
+                        Has completado la misión.
+                    </p>
+
+                    <p>
+                        Este es tu regalo de cumpleaños:
+                    </p>
+
+                    <div class="codigo-regalo">
+                        TU-CODIGO-AQUI
+                    </div>
+
+                    <button id="btnContinuarRegalo">
+                        CONTINUAR →
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- =========================================
+     NOTIFICACIÓN DE LA CARTA
+     ========================================= -->
+
+        <section id="carta-notificacion">
+
+            <div class="notificacion-carta">
+
+                <div class="sobre-icono">
+                    💌
+                </div>
+
+                <p class="notificacion-pequena">
+                    NUEVO MENSAJE
+                </p>
+
+                <h1>
+                    Mariana ♥ te ha enviado
+                    una carta
+                </h1>
+
+                <button id="btnLeerCarta">
+                    LEER
+                </button>
+
+            </div>
+
+            <!-- ========================================= -->
+            <!-- PANTALLA DE LA CARTA -->
+            <!-- ========================================= -->
+
+            <section id="pantalla-carta" class="pantalla-carta oculta">
+
+                <div class="carta">
+
+                    <div class="carta-decoracion">
+                        🌸
+                    </div>
+
+                    <div class="carta-contenido">
+
+                        <p class="carta-saludo">
+                            Para ti, mi amor...
+                        </p>
+
+                        <div id="texto-carta"></div>
+
+                        <div class="cursor-carta"></div>
+
+                        <div class="botones-finales-carta">
+
+                            <button id="btnVolverLeerCarta">
+                                ↻ VOLVER A LEER CARTA
+                            </button>
+
+                            <button id="btnVerCodigosRegalo">
+                                🎁 VER CÓDIGOS DE REGALO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        </div>
+
+    </section>
+
+
+    <!-- PANTALLA 4: RECOMPENSA -->
+    <section id="regalo-screen">
+
+        <h1>REWARD UNLOCKED 🎁</h1>
+
+        <h2>¡Misión completada!</h2>
+
+        <p>Has desbloqueado tu regalo.</p>
+
+        <div id="codigo-regalo">
+
+            <p>YOUR REWARD</p>
+
+            <p id="codigo"></p>
+
+            <button id="btnCopiar">COPIAR CÓDIGO</button>
+
+        </div>
+
+        <button id="btnCompletarRegalo">COMPLETADO ✓</button>
+
+    </section>
+
+
+    <!-- PANTALLA 5: CARTA -->
+    <section id="carta-screen">
+
+        <h1>💌 Nueva notificación</h1>
+
+        <p>Mariana &lt;3 te ha enviado una carta.</p>
+
+        <button id="btnLeer">LEER</button>
+
+        <div id="carta">
+
+            <h2>Para Kilian ❤️</h2>
+
+            <p>
+                Aquí aparecerá tu carta...
+            </p>
+
+            <p>
+                — Mariana
+            </p>
+
+        </div>
+
+        <h2>MISSION COMPLETE</h2>
+
+        <p>Happy Birthday, Kilian. ❤️</p>
+
+        <p>Gracias por dejarme formar parte de tu vida.</p>
+
+        <button id="btnInicio">VOLVER AL PRINCIPIO</button>
+
+    </section>
+
+    <div id="gears-transition" class="gears-transition"></div>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
