@@ -656,7 +656,7 @@ Te ama, Mariana<3`
 
 
                 temporizadorCarta =
-                    setTimeout(escribir, 80);
+                    setTimeout(escribir, 60);
 
             } else {
 
